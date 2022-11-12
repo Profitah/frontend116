@@ -53,10 +53,11 @@
     <!-- 좋아요를 표시-->
     <div class="heart">
         <p class="like"><a href="{% url 'likes' cashbooks.id %}">
-        {% if user in cashbooks.like.all %}
-        {% else %}
-        {{ cashbooks.like_count }}
-        {% endif %}
+            {% if user in cashbooks.like.all %}
+            취소
+            {% else %}
+            좋아요 {{ cashbooks.like_count }}
+            {% endif %}
         </a></p>
 </div>
 <div class="animation-heart">
